@@ -3,3 +3,5 @@ global using System.Text.Json.Serialization;
 global using MediatR;
 global using CleanArchitectureDotnet.Application.Responses;
 global using FluentValidation;
+global using AutoMapper;
+global using FluentValidation.Results;

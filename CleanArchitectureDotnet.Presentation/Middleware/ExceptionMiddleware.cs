@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace CleanArchitectureDotnet.Presentation.Middleware
+﻿namespace CleanArchitectureDotnet.Presentation.Middleware
 {
     public class ExceptionMiddleware
     {
@@ -18,8 +16,14 @@ namespace CleanArchitectureDotnet.Presentation.Middleware
                 await _next(httpContext);
             }catch(Exception ex)
             {
-                //TODO:
+                if (ex is ValidationException validationException)
+                    await HandleValidationException(httpContext, validationException);
             }
+        }
+
+        private async Task HandleValidationException(HttpContext httpContext,  ValidationException e)
+        {
+            //TODO:
         }
     }
 }
