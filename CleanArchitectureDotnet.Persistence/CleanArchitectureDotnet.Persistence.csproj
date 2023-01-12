@@ -11,7 +11,6 @@
     <None Remove="Configurations\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
     <Folder Include="Configurations\" />
   </ItemGroup>
   <ItemGroup>
